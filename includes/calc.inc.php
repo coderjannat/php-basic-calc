@@ -16,8 +16,7 @@ include 'class-autoload.inc.php';
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Result is : 
-    <?php
+    <h1>Resultss is :<?php
 $oper = $_POST["oper"];
 $num1 = $_POST["num1"];
 $num2 = $_POST["num2"];
@@ -32,10 +31,8 @@ catch(TypeError $e){
 }
 ?>
     </h1>
-    <div>
-    <a href="../index.php"><button>Home</button></a>
-    </div>
-   
+   <a href="../index.php"><button>Home</button></a>
+  
     
 </body>
 </html>
