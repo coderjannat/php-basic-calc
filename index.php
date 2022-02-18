@@ -16,7 +16,7 @@ include 'includes/class-autoload.inc.php';
 </head>
 
 <body>
-    <form action="includes/calc.inc.php" method="post" >
+    <form action="" method="post">
         <h1>Basic Php Calculator</h1>
         <input type="number" name="num1" placeholder="First Number">
         <select name="oper">
@@ -27,6 +27,20 @@ include 'includes/class-autoload.inc.php';
         </select>
         <input type="number" name="num2" placeholder="Second Number"> <br>
         <button type="submit" name="submit">Calculate</button>
+
+        <?php
+        $oper = $_POST["oper"];
+        $num1 = $_POST["num1"];
+        $num2 = $_POST["num2"];
+
+        $calc = new Calc($oper, (int)$num1, (int)$num2);
+
+        try {
+            echo $calc->calculator();
+        } catch (TypeError $e) {
+            echo "Error! :" . $e->getMessage();
+        }
+        ?>
     </form>
 </body>
 
