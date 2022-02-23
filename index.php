@@ -27,6 +27,7 @@ include 'includes/class-autoload.inc.php';
         </select>
         <input type="number" name="num2" placeholder="Second Number"> <br>
         <button type="submit" name="submit">Calculate</button>
+
     </form>
 </body>
 
